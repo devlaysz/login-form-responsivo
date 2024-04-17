@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+/* VARIAVEIS */
+:root {
+    --color-yellow: #FFFFD0;
+    --color-purple-30: #F3CCFF;
+    --color-purple-50: #D09CFA;
+    --color-purple-100: #A555EC;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-yellow);
+}
+/* CONTAINER */
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+/* IMG */
+.form_svg {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-purple-30);
+    padding: 1rem;
+}
+
+.form_svg img {
+    width: 31rem;
+}
+/* FORMULÁRIO */
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 3rem;
+}
+/* CABEÇALHO */
+.header {
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.header h1::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 3rem;
+    height: 0.3rem;
+    background: var(--color-purple-100);
+    border-radius: 10px;
+}
+/* INPUTS */
+.input_group {
+    position: relative;
+    bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input_box input {
+    display: flex;
+    width: 15rem;
+    height: 4vh;
+    border: none;
+    background: var(--color-purple-30);
+    padding: 5px;
+}
+
+.input_box input::placeholder {
+    padding: 3%;
+}
+
+.input_box input:focus-visible {
+    outline: none;
+}
+
+.input_box label {
+    font-size: 1.5ch;
+}
+/* FORGOT PASSWORD */
+.forgot_password {
+    margin-left: 7.5rem;
+    font-size: small;
+    position: relative;
+    bottom: 4rem;
+}
+
+.forgot_password a {
+    text-decoration: none;
+}
+
+.forgot_password a:hover {
+    color: var(--color-purple-100);
+}
+/* BUTTON */
+.login_btn button {
+    width: 15rem;
+    height: 4vh;
+    position: relative;
+    bottom: 3rem;
+    background: var(--color-purple-100);
+    border: none;
+}
+
+.login_btn button:hover {
+    background: var(--color-purple-50);
+    cursor: pointer;
+}
+
+.login_btn button a {
+    text-decoration: none;
+    color: #fff;
+}
+/* INSCREVA-SE */
+.subscribe {
+    font-size: 1.5ch;
+    position: relative;
+    bottom: 2rem;
+}
+
+.subscribe a {
+    text-decoration: none;
+}
+
+.subscribe a:hover {
+    color: var(--color-purple-100);
+}
+
+  
+/* RESPONSIVO */
+
+@media screen and (max-width: 1000px) {
+    .form_svg {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+    }
+    .input_group {
+        flex-direction: column;
+        z-index: 5;
+        max-height: 10rem;
+        flex-wrap: nowrap;
+    }
+}
